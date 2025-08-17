@@ -1,11 +1,13 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 // ----- Config rapida -----
 $name        = "Fabrizio Papa";
 $role        = "Ufficio Stipendi · Università Parthenope";
 $tagline     = "Etica prima di tutto. Curiosità come carburante.";
 $email       = "tuo@email.it";       // opzionale, per il link contatti
 $linkedin    = "https://www.linkedin.com/in/tuo-profilo";
-"github"     = "https://github.com/fabriziopapa";
+$github     = "https://github.com/fabriziopapa";
 $location    = "Napoli, Italia";
 
 // Data ultimo update (dal file)
@@ -134,7 +136,7 @@ $last_update = date("d/m/Y H:i", filemtime(__FILE__));
       </div>
       <div class="card">
         <!-- Sostituisci con una tua immagine (caricala in /www/assets/portrait.jpg) -->
-        <img src="assets/portrait.jpg" alt="Ritratto di <?= htmlspecialchars($name) ?>" loading="lazy"
+        <img src="assets/logoFP.png" alt="Ritratto di <?= htmlspecialchars($name) ?>" loading="lazy"
              onerror="this.src='data:image/svg+xml;utf8,<?xml version=&quot;1.0&quot;?><svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;800&quot; height=&quot;600&quot;><rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;%23111926&quot;/><text x=&quot;50%&quot; y=&quot;50%&quot; dominant-baseline=&quot;middle&quot; text-anchor=&quot;middle&quot; fill=&quot;%2394a3b8&quot; font-family=&quot;Arial&quot; font-size=&quot;22&quot;>Carica assets/portrait.jpg</text></svg>';">
       </div>
     </section>
