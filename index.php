@@ -8,7 +8,7 @@ $now = new DateTime('now', new DateTimeZone('Europe/Rome'));
 <html lang="it">
 <head>
   <meta charset="utf-8">
-  <title>Pagina su Aruba + PHP + Test</title>
+  <title>Pagina su Aruba + PHP + Test2</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>body{font-family:system-ui,Arial,sans-serif;padding:2rem;max-width:60ch;margin:auto}</style>
 </head>
