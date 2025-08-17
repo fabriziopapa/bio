@@ -1,31 +1,33 @@
-#<?php
-#ini_set('display_errors', 1);
-#error_reporting(E_ALL);
-#// ----- Config rapida -----
-#$name        = "Fabrizio Papa";
-#$role        = "Ufficio Stipendi · Università Parthenope";
-#$tagline     = "Etica prima di tutto. Curiosità come carburante.";
-#$email       = "tuo@email.it";       // opzionale, per il link contatti
-#$linkedin    = "https://www.linkedin.com/in/tuo-profilo";
-#$github     = "https://github.com/fabriziopapa";
-#$location    = "Napoli, Italia";
+<?php
+// Debug attivo: toglilo quando funziona tutto
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+//error_reporting(E_ALL);
+
+// ----- Config rapida -----
+$name        = "Fabrizio Papa";
+$role        = "Ufficio Stipendi · Università Parthenope";
+$tagline     = "Etica prima di tutto. Curiosità come carburante.";
+$email       = "fabrizio.papa@gmail.com";       // opzionale, per il link contatti
+$linkedin    = "https://www.linkedin.com/in/papafabrizio/";
+$github      = "https://github.com/fabriziopapa";
+$location    = "Napoli, Italia";
 
 // Data ultimo update (dal file)
-#$last_update = date("d/m/Y H:i", filemtime(__FILE__));
-#?>
-<!doctype html>
+$last_update = date("d/m/Y H:i", filemtime(__FILE__));
+?>
+<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?= htmlspecialchars($name) ?> — Sito personale</title>
-  <meta name="description" content="Pagina personale di <?= htmlspecialchars($name) ?>. <?= htmlspecialchars($tagline) ?>">
-  <meta property="og:title" content="<?= htmlspecialchars($name) ?>">
-  <meta property="og:description" content="<?= htmlspecialchars($tagline) ?>">
+  <title><?php echo htmlspecialchars($name); ?> — Sito personale</title>
+  <meta name="description" content="Pagina personale di <?php echo htmlspecialchars($name); ?>. <?php echo htmlspecialchars($tagline); ?>">
+  <meta property="og:title" content="<?php echo htmlspecialchars($name); ?>">
+  <meta property="og:description" content="<?php echo htmlspecialchars($tagline); ?>">
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#0ea5e9">
 
-  <!-- Font: system stack per performance, fallback gradevole -->
   <style>
     :root{
       --bg: #0b0f14;
@@ -108,8 +110,8 @@
         <div class="brand">
           <div class="logo" aria-hidden="true"></div>
           <div>
-            <strong><?= htmlspecialchars($name) ?></strong><br>
-            <span class="muted" style="font-size:.9rem"><?= htmlspecialchars($role) ?></span>
+            <strong><?php echo htmlspecialchars($name); ?></strong><br>
+            <span class="muted" style="font-size:.9rem"><?php echo htmlspecialchars($role); ?></span>
           </div>
         </div>
         <div class="menu">
@@ -124,20 +126,18 @@
   <main class="container">
     <section class="hero">
       <div>
-        <span class="pill">👋 Ciao, sono <?= htmlspecialchars($name) ?></span>
-        <h1><?= htmlspecialchars($tagline) ?></h1>
+        <span class="pill">👋 Ciao, sono <?php echo htmlspecialchars($name); ?></span>
+        <h1><?php echo htmlspecialchars($tagline); ?></h1>
         <p class="muted">Ricercatore eclettico tra scienza, tecnologia e umanesimo.  
-          Lavoro a soluzioni pulite, chiare e utili. <?= htmlspecialchars($location) ?>.</p>
+          Lavoro a soluzioni pulite, chiare e utili. <?php echo htmlspecialchars($location); ?>.</p>
         <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
           <a class="btn" href="#projects">Vedi i progetti</a>
-          <a class="btn" href="<?= htmlspecialchars($github) ?>" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="<?= htmlspecialchars($linkedin) ?>" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="<?php echo htmlspecialchars($github); ?>" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="<?php echo htmlspecialchars($linkedin); ?>" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
       <div class="card">
-        <!-- Sostituisci con una tua immagine (caricala in /www/assets/portrait.jpg) -->
-        <img src="assets/logoFP.png" alt="Ritratto di <?= htmlspecialchars($name) ?>" loading="lazy"
-             onerror="this.src='data:image/svg+xml;utf8,<?xml version=&quot;1.0&quot;?><svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;800&quot; height=&quot;600&quot;><rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;%23111926&quot;/><text x=&quot;50%&quot; y=&quot;50%&quot; dominant-baseline=&quot;middle&quot; text-anchor=&quot;middle&quot; fill=&quot;%2394a3b8&quot; font-family=&quot;Arial&quot; font-size=&quot;22&quot;>Carica assets/portrait.jpg</text></svg>';">
+        <img src="assets/logoFP.png" alt="Ritratto di <?php echo htmlspecialchars($name); ?>" loading="lazy">
       </div>
     </section>
 
@@ -145,12 +145,12 @@
       <h2>Chi sono</h2>
       <div class="grid grid-2">
         <div class="card">
-          <p>Sono <?= htmlspecialchars($name) ?>. Mi occupo di processi e dati, con attenzione all’etica
+          <p>Sono <?php echo htmlspecialchars($name); ?>. Mi occupo di processi e dati, con attenzione all’etica
           e alla qualità. Mi piace costruire strumenti semplici che risolvono problemi reali.</p>
           <ul>
             <li>🎯 Focus: automazione, web e dati</li>
             <li>🧰 Stack: PHP, Python/Flask, HTML/CSS/JS</li>
-            <li>📍 <?= htmlspecialchars($location) ?></li>
+            <li>📍 <?php echo htmlspecialchars($location); ?></li>
           </ul>
         </div>
         <div class="card">
@@ -174,13 +174,13 @@
         </div>
         <div class="card">
           <h3>Pagina personale</h3>
-          <p class="muted">Questo template minimal, ottimizzato per hosting condivisi (Aruba).</p>
+          <p class="muted">Template minimal, ottimizzato per hosting condivisi (Aruba).</p>
           <a class="btn" href="#contact">Richiedi il codice</a>
         </div>
         <div class="card">
           <h3>Esperimenti</h3>
           <p class="muted">Spazio per prove su dati, API e UI accessibili.</p>
-          <a class="btn" href="<?= htmlspecialchars($github) ?>" target="_blank" rel="noopener">Vedi su GitHub</a>
+          <a class="btn" href="<?php echo htmlspecialchars($github); ?>" target="_blank" rel="noopener">Vedi su GitHub</a>
         </div>
       </div>
     </section>
@@ -191,19 +191,19 @@
         <p>Scrivimi per collaborazioni o idee.</p>
         <ul>
           <?php if (!empty($email)): ?>
-          <li>📧 <a href="mailto:<?= htmlspecialchars($email) ?>"><?= htmlspecialchars($email) ?></a></li>
+          <li>📧 <a href="mailto:<?php echo htmlspecialchars($email); ?>"><?php echo htmlspecialchars($email); ?></a></li>
           <?php endif; ?>
-          <li>🔗 <a href="<?= htmlspecialchars($linkedin) ?>" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li>💻 <a href="<?= htmlspecialchars($github) ?>" target="_blank" rel="noopener">GitHub</a></li>
+          <li>🔗 <a href="<?php echo htmlspecialchars($linkedin); ?>" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li>💻 <a href="<?php echo htmlspecialchars($github); ?>" target="_blank" rel="noopener">GitHub</a></li>
         </ul>
       </div>
     </section>
 
     <footer>
       <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
-        <span>© <?= date("Y") ?> <?= htmlspecialchars($name) ?></span>
+        <span>© <?php echo date("Y"); ?> <?php echo htmlspecialchars($name); ?></span>
         <span class="muted">·</span>
-        <span class="muted">Ultimo aggiornamento: <?= $last_update ?></span>
+        <span class="muted">Ultimo aggiornamento: <?php echo $last_update; ?></span>
       </div>
     </footer>
   </main>
