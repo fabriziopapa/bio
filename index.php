@@ -170,7 +170,7 @@ $last_update = date("d/m/Y H:i", filemtime(__FILE__));
         <div class="card">
           <h3>CSV → TXT App</h3>
           <p class="muted">Piccola utility per convertire CSV in TXT pronta per batch.</p>
-          <a class="btn" href="https://app.fabriziopapa.it/" target="_blank" rel="noopener">Repository</a>
+          <a class="btn" href="https://app.fabriziopapa.it/" target="_blank" rel="noopener">Vai all'app</a>
         </div>
         <div class="card">
           <h3>Pagina personale</h3>
