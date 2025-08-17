@@ -20,7 +20,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}     # presi dall’environment
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftp                         # <— FTP (in chiaro)
+          protocol: sftp                         # <— FTP (in chiaro)
           port: 21
           timeout: 600
           local-dir: ./
