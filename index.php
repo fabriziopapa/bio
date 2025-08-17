@@ -1,18 +1,18 @@
-<?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-// ----- Config rapida -----
-$name        = "Fabrizio Papa";
-$role        = "Ufficio Stipendi · Università Parthenope";
-$tagline     = "Etica prima di tutto. Curiosità come carburante.";
-$email       = "tuo@email.it";       // opzionale, per il link contatti
-$linkedin    = "https://www.linkedin.com/in/tuo-profilo";
-$github     = "https://github.com/fabriziopapa";
-$location    = "Napoli, Italia";
+#<?php
+#ini_set('display_errors', 1);
+#error_reporting(E_ALL);
+#// ----- Config rapida -----
+#$name        = "Fabrizio Papa";
+#$role        = "Ufficio Stipendi · Università Parthenope";
+#$tagline     = "Etica prima di tutto. Curiosità come carburante.";
+#$email       = "tuo@email.it";       // opzionale, per il link contatti
+#$linkedin    = "https://www.linkedin.com/in/tuo-profilo";
+#$github     = "https://github.com/fabriziopapa";
+#$location    = "Napoli, Italia";
 
 // Data ultimo update (dal file)
-$last_update = date("d/m/Y H:i", filemtime(__FILE__));
-?>
+#$last_update = date("d/m/Y H:i", filemtime(__FILE__));
+#?>
 <!doctype html>
 <html lang="it">
 <head>
